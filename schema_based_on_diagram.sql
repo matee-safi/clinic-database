@@ -40,3 +40,6 @@ CREATE TABLE medical_histories_treatments (
 );
 CREATE INDEX fk_medical_histories_treatments_medical_histories_idx ON medical_histories_treatments (medical_history_id);
 CREATE INDEX fk_medical_histories_treatments_treatments_idx ON medical_histories_treatments (treatment_id);
+CREATE INDEX fk_medical_histories_patients_idx ON medical_histories (patient_id);
+CREATE INDEX fk_invoices_medical_histories_idx ON invoices (medical_history_id);
+CREATE INDEX fk_invoice_items_invoices_idx ON invoice_items (invoice_id);
