@@ -38,3 +38,5 @@ CREATE TABLE medical_histories_treatments (
     treatment_id INT,
     PRIMARY KEY (medical_history_id, treatment_id)
 );
+CREATE INDEX fk_medical_histories_treatments_medical_histories_idx ON medical_histories_treatments (medical_history_id);
+CREATE INDEX fk_medical_histories_treatments_treatments_idx ON medical_histories_treatments (treatment_id);
